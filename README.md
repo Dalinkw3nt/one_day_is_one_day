@@ -18,6 +18,7 @@ Create a Kubernetes deployment and service configuration
 Use the file named hello-world.yaml, and then apply it to your Minikube cluster:
 
     
+    minikube start
     kubectl apply -f hello-world.yaml
 
 *****Minikube installed and running on your system to apply the Kubernetes configuration
