@@ -22,3 +22,13 @@ Use the file named hello-world.yaml, and then apply it to your Minikube cluster:
     kubectl apply -f hello-world.yaml
 
 *****Minikube installed and running on your system to apply the Kubernetes configuration
+
+    kubectl expose deployment hello-world-app-deployment --port=80 --target-port=5000 --name=hello-world-app --type=LoadBalancer
+
+    or
+
+    kubectl expose deployment hello-world-app-deployment --type=LoadBalancer --port=5000
+
+    You can then get the exposed url:
+
+    minikube service hello-world-app-deployment --url
