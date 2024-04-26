@@ -9,7 +9,7 @@ Create a file named requirements.txt with the following content:
 Build the Docker image and run it:
 
    
-    docker build -t hello-world-app .
+    docker build -t hello-world-app:latest .
     docker run -p 5000:5000 hello-world-app
     Your "Hello, World!" application should now be running in a Docker container.
 
@@ -20,6 +20,8 @@ Use the file named hello-world.yaml, and then apply it to your Minikube cluster:
     
     minikube start
     kubectl apply -f hello-world.yaml
+
+    kubectl run hello-world-app --image=hello-world-app:latest --port=80
 
 *****Minikube installed and running on your system to apply the Kubernetes configuration
 
