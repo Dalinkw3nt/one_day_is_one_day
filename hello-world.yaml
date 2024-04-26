@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world-app
+  name: hello-world-app-deployment
 spec:
   replicas: 2
   selector:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello-world-app
-        image: hello-world-app:latest
+        image: hello-world-app
         resources:
           limits:
             memory: 1024Mi
